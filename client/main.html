@@ -1,0 +1,73 @@
+<head>
+  <title>iMove</title>
+</head>
+
+<body>
+  <div class="container">
+  <div align="left">{{> loginButtons}}</div>
+    <h1>Welcome to iMove</h1>
+    <br>
+    <br>
+    {{> newshipment}}
+  </div>
+</body>
+
+<template name="newshipment"> 
+    <form class="new_shipment">
+    <div class="well row">
+      <p>Please tell us about the object you wish to move.</p>
+    </div>
+    <div class="well row">
+        <div data-toggle="collapse" data-target="#loc"><a>Locations</a></div>
+        <div class="row collapse" id="loc">
+          From <input type="text" class="form-control col-md-2" placeholder="City"><br>
+          To <input type="text" class="form-control" placeholder="City"><br>
+        </div>
+    </div>
+<!--     <div class="well row hidden">
+      Type:<br>
+      <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div> -->
+    <div class="well row">
+      <div data-toggle="collapse" data-target="#dims"><a>Dimentions</a></div>
+      <div class="row collapse" id="dims">
+        <div>
+          Width <input type="number" placeholder="cm" size="2">
+        </div>
+        <div>
+          Length <input type="number" class="form-control" placeholder="cm">
+        </div>
+        <div>
+          Height <input type="number" class="form-control" placeholder="cm">
+        </div>
+        <br>
+        <div>
+          Weight <input type="number" class="form-control" placeholder="KG">
+        </div>   
+      </div>     
+    </div>
+    <div class="well row">
+        <div data-toggle="collapse" data-target="#date"><a>Date</a></div>
+        <div class="row collapse" id="date">   
+          <input type="date" class="form-control" placeholder="cm">
+        </div>
+    </div>
+    <input type="submit" value="Submit" class="btn "> 
+    <div class="row">
+    {{#if currentUser }}      
+        <input type="submit" value="Submit" class="btn ">      
+      {{else}}
+        Log in to submit
+    {{/if}}
+    </div>    
+    </form>
+</template>
+
+<template name="info">
+
+</template>

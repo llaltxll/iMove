@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+body {
+	background: rgb(240,240,240);
+	font-weight: bold;
+	text-align: center;
+}
+a {
+	cursor:pointer;
+}
+.well {
+	margin-bottom: 0px;
+}
