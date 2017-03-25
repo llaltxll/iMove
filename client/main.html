@@ -3,12 +3,17 @@
 </head>
 
 <body>
+
+  <header>
+    <div align="left">{{> loginButtons}}</div>
+  </header>
   <div class="container">
-  <div align="left">{{> loginButtons}}</div>
+    {{> Template.dynamic template=main}}
     <h1>Welcome to iMove</h1>
     <br>
+    There curently are {{storedJobs}} Jobs in the DB
     <br>
-    {{> newshipment}}
+    <!-- {{> newshipment}} -->
   </div>
 </body>
 
@@ -20,47 +25,37 @@
     <div class="well row">
         <div data-toggle="collapse" data-target="#loc"><a>Locations</a></div>
         <div class="row collapse" id="loc">
-          From <input type="text" class="form-control col-md-2" placeholder="City"><br>
-          To <input type="text" class="form-control" placeholder="City"><br>
+          From <input type="text" class="form-control col-md-2" placeholder="City" required><br>
+          To <input type="text" class="form-control" placeholder="City" required><br>
         </div>
     </div>
-<!--     <div class="well row hidden">
-      Type:<br>
-      <select name="cars">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="fiat">Fiat</option>
-        <option value="audi">Audi</option>
-      </select>
-    </div> -->
     <div class="well row">
       <div data-toggle="collapse" data-target="#dims"><a>Dimentions</a></div>
       <div class="row collapse" id="dims">
         <div>
-          Width <input type="number" placeholder="cm" size="2">
+          Width <input type="number" placeholder="cm" required>
         </div>
         <div>
-          Length <input type="number" class="form-control" placeholder="cm">
+          Length <input type="number" class="form-control" placeholder="cm" required>
         </div>
         <div>
-          Height <input type="number" class="form-control" placeholder="cm">
+          Height <input type="number" class="form-control" placeholder="cm" required>
         </div>
         <br>
         <div>
-          Weight <input type="number" class="form-control" placeholder="KG">
+          Weight <input type="number" class="form-control" placeholder="KG" required>
         </div>   
       </div>     
     </div>
     <div class="well row">
         <div data-toggle="collapse" data-target="#date"><a>Date</a></div>
         <div class="row collapse" id="date">   
-          <input type="date" class="form-control" placeholder="cm">
+          <input type="date" class="form-control" required>
         </div>
     </div>
-    <input type="submit" value="Submit" class="btn "> 
     <div class="row">
     {{#if currentUser }}      
-        <input type="submit" value="Submit" class="btn ">      
+        <input type="submit" value="Go" class="btn ">      
       {{else}}
         Log in to submit
     {{/if}}

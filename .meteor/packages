@@ -25,3 +25,5 @@ matb33:bootstrap-glyphicons
 joshdellay:jquery-mobile-menu
 accounts-password
 accounts-ui
+kadira:flow-router
+kadira:blaze-layout

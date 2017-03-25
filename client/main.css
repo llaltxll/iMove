@@ -1,5 +1,6 @@
 /* CSS declarations go here */
 body {
+	padding: 0px;
 	background: rgb(240,240,240);
 	font-weight: bold;
 	text-align: center;
@@ -9,4 +10,11 @@ a {
 }
 .well {
 	margin-bottom: 0px;
+}
+header {
+	margin-bottom: 10px;
+	padding-left: 50px;
+	background-color: rgb(200,200,200);
+	position: fixed;
+	width: 100%;
 }
